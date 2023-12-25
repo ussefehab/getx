@@ -12,7 +12,7 @@ class HomePage extends StatelessWidget {
         title: const Center(child: Text("COUNTER")),
         backgroundColor: Colors.orange,
       ),
-      body:GetBuilder<HomePageController>(
+      body:GetX<HomePageController>(
         init: HomePageController(),
         builder: (controller) =>Align(
           child: Container(
@@ -36,7 +36,7 @@ class HomePage extends StatelessWidget {
           
                 }, icon:const Icon(Icons.add) ),
                 const SizedBox(width: 5,),
-                 Text("${controller.counter}"),
+                 Text("${controller.counter.value}"),
                 const SizedBox(width: 5,),
                 IconButton(onPressed: (){              controller.decrement();
           
